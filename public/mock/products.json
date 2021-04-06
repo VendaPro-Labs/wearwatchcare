@@ -1,0 +1,234 @@
+[
+    {
+      "id": "prod_08f73b9a1902190849",
+      "source_id": "14",
+      "name": "Johan & Nyström - Fika",
+      "price": 1300,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045060433",
+        "info": "Fika is an important part of Swedish culture which means a tea or coffee break. This coffee was created to cultivate this tradition. This is full-bodied, perfectly balanced coffee with delicate hints of cocoa. Have a coffee break! ",
+        "slug": "7350045060433",
+        "order": 4,
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Fika.jpg",
+      "created_at": "2021-03-21T18:14:27.173Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a19987e2513",
+      "source_id": "13",
+      "name": "Nivona - CafeRomatica 759",
+      "price": 71400,
+      "attributes": [],
+      "metadata": {
+        "sku": "4260083467596",
+        "info": "CafeRomatica 759 is the perfect machine for all those how like their life and their coffee clear, strong and uncomplicated. This model satisfies admirers of clean lines with its matt black front and a new quieter grinder.",
+        "slug": "4260083467596",
+        "order": 3,
+        "weight": 0,
+        "company": "Nivona",
+        "categories": "Coffee Machines"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Nivona+CafeRomatica+759.jpg",
+      "created_at": "2021-03-21T18:14:27.174Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a1c855c8b1c",
+      "source_id": "11",
+      "name": "Illy - Arabica",
+      "price": 830,
+      "attributes": [],
+      "metadata": {
+        "sku": "8003753970073",
+        "info": "Arabica is a new line of single origin coffee from Illy's roaster. The beans from Guatemala is characterized by a complex flavour with the delicate hints of caramel, chocolate and honey. In Guatemala, Coffee is grown on the fertile soil high in the mountains. Suitable temperatures are the result of the hot air current from Mexico. That, along with farmers' care, results in the beans with intense aroma, complex flavour and pleasant sweetness.",
+        "slug": "8003753970073",
+        "order": 1,
+        "weight": 250,
+        "company": "Illy",
+        "categories": "Coffee,Whole Bean,Single Origin"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Illy+Arabica+Selection+-+Guatemala.jpg",
+      "created_at": "2021-03-21T18:14:27.187Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a198219084a",
+      "source_id": "19",
+      "name": "Johan & Nyström - Bueno",
+      "price": 1900,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045060808",
+        "info": "Bueno is Fair Trade coffee. It contains 100% organic and certified coffee beans. This healthy blend tastes best when brewed using French Press or filter coffee maker.",
+        "slug": "7350045060808",
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean,Fairtrade"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Buena+Vista+Fairtrade.jpg",
+      "created_at": "2021-03-21T18:14:27.187Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a20187e2519",
+      "source_id": "21",
+      "name": "Illy - Decaffeinato",
+      "price": 760,
+      "attributes": [],
+      "metadata": {
+        "sku": "8003753900490",
+        "info": "Illy espresso is coffee with thick chestnut crema. Its taste offers many flavours such as nuts, fruit and pleasant wood notes. According to the Illy's roaster, caffeine content in the blend is less than 0.05%, which makes it very gentle on your stomach so you can drink it without having to worry in case of any medical contraindications for drinking of traditional coffee.",
+        "slug": "8003753900490",
+        "weight": 250,
+        "company": "Illy",
+        "categories": "Coffee,Ground,Decaffeinated"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Illy+Espresso+Decaffeinato+-+Decaffeinated+ground+coffee.jpg",
+      "created_at": "2021-03-21T18:14:27.201Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a21c2190855",
+      "source_id": "17",
+      "name": "Johan & Nyström - Urban",
+      "price": 1800,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045064356",
+        "info": "Background for this blend comes from the longing for a real dark roasting of high-quality coffee beans. Although the beans are dark roasted, they keep their clear and intense aroma. This coffee has full sweetness of cacao, a note of walnuts and slight bitterness.",
+        "slug": "7350045064356",
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Urban+Juice.jpg",
+      "created_at": "2021-03-21T18:14:27.207Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a1f07691d8e",
+      "source_id": "12",
+      "name": "Johan & Nyström - Bourbon",
+      "price": 1750,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045060389",
+        "info": "Background for this blend comes from the longing for a real dark roasting of high-quality coffee beans. Although the beans are dark roasted, they keep their clear and intense aroma. This coffee has a smoky flavour with a slight hint of sweetness and loads of fruit notes. Thanks to the experience in the dark roasting of coffee, the beans still retain most of their aromas. Its aftertaste is clear and remains for a long time. This coffee is perfect for a Dripper, French Press, Moka coffee maker and the traditional espresso brewing method.",
+        "slug": "7350045060389",
+        "order": 2,
+        "weight": 0,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Bourbon+Jungle.jpg",
+      "created_at": "2021-03-21T18:14:27.212Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a1f87691d8f",
+      "source_id": "20",
+      "name": "Johan & Nyström - Espresso",
+      "price": 1900,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045060815",
+        "info": "The blend consists of coffee beans from Ethiopia, Sumatra, and Nicaragua. Together they create a flavourful espresso with loads of chocolate and sweet fruit. The Ethiopian coffee brings delicate and fruity notes, while the Sumatran and Nicaraguan beans provide some heavier sweet hints. Not only loaded with flavour, but also prepared ethically!",
+        "slug": "7350045060815",
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean,Fairtrade"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Espresso+Fairtrade.jpg",
+      "created_at": "2021-03-21T18:14:27.216Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a24587e251f",
+      "source_id": "15",
+      "name": "Johan & Nyström - Sumatra",
+      "price": 1900,
+      "attributes": [],
+      "metadata": {
+        "sku": "857354768463",
+        "info": "Sumatra comes from the province of Ache located in the northern part of Sumatra. This is dark roasted coffee with the intense aroma of spices and fresh figs. Its rich, well-balanced flavour will satisfy even the most demanding palate.",
+        "slug": "857354768463",
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Whole Bean,Coffee,Fairtrade"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Sumatra+Gayo+Mountain+Fairtrade+500g.jpg",
+      "created_at": "2021-03-21T18:14:27.217Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a2bc219085b",
+      "source_id": "22",
+      "name": "Kleen Kentean - Thermos 750ml",
+      "price": 1500,
+      "attributes": [],
+      "metadata": {
+        "sku": "80037539003320",
+        "info": "Basic coffee thermos, great for big adventures. Can keep the drink temperature for up to two hours.",
+        "slug": "80037539003320",
+        "weight": 110,
+        "company": "Kleen Kentean",
+        "categories": "Accessories"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Kleen+Kentean+-+Thermos+750ml.jpg",
+      "created_at": "2021-03-21T18:14:27.249Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9a2c4219085c",
+      "source_id": "18",
+      "name": "Hard Beans - Brazil",
+      "price": 3000,
+      "attributes": [],
+      "metadata": {
+        "sku": "756576756756",
+        "info": "Speciality coffee beans from Brazil, roasted by Hard Beans from Poland. Medium roast, perfect for espresso machines and moka pots. You can expect hints of nougat, nuts and red apples. Country: Brazil Region: Sul de Minas Process: Pulped natural Variety: Yellow Bourbon Altitude: 1200 m a.s.l.",
+        "slug": "756576756756",
+        "weight": 1000,
+        "company": "Hard Beans",
+        "categories": "Coffee,Whole Bean"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Hard+Beans+-+Brazil+Samambaia+Espresso+1kg.jpg",
+      "created_at": "2021-03-21T18:14:27.249Z",
+      "updated_at": null,
+      "object": "product"
+    },
+    {
+      "id": "prod_08f73b9af202190867",
+      "source_id": "16",
+      "name": "Johan & Nyström - Caravan",
+      "price": 1750,
+      "attributes": [],
+      "metadata": {
+        "sku": "7350045061225",
+        "info": "We have created a blend of beans from some of the world's top countries producing coffee. To create classic dark-roasted coffee, we combined the softness of Mogiana from Brazil, the consistency of Lintung from Sumatra and the freshness of Ethiopia and Colombia. Caravan is a blend created for dark-roasted coffee lovers. Strong, with well-defined aroma and long lasting flavour.",
+        "slug": "7350045061225",
+        "weight": 500,
+        "company": "Johan & Nyström",
+        "categories": "Coffee,Whole Bean"
+      },
+      "image_url": "https://vf-asset.s3-eu-west-1.amazonaws.com/demostore-hot-beans/products/Johan+%26+Nyström+-+Caravan.jpg",
+      "created_at": "2021-03-21T18:14:28.040Z",
+      "updated_at": null,
+      "object": "product"
+    }
+  ]
