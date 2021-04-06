@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ProductCard from './ProductCard';
 
+import './style.css';
+
 class Products extends React.Component {
 
     state = { products: [] };
@@ -27,8 +29,8 @@ class Products extends React.Component {
         if (this.state.products && this.state.products.length) {
             //your code here
             return (
-                <div>
-                    <Row>
+                <div className="page productPage">
+                    <Row className="products">
                         {   this.state.products.map ( ( product) => (
                             <ProductCard key={product.id} product={product} ></ProductCard>
 
