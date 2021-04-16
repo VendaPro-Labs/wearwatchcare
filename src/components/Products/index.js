@@ -56,7 +56,8 @@ class Products extends React.Component {
 
 const getProducts = () => async () => {
     try {
-        const productUrl =  `${process.env.REACT_APP_API_URL}/mock/products.json`;
+        //const productUrl =  `${process.env.REACT_APP_API_URL}/mock/products.json`;
+        const productUrl =  `/mock/products.json`;
     const res = await fetch (
           productUrl,
         {

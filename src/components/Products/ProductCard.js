@@ -29,7 +29,7 @@ const ProductCard = ( {product} ) => {
             <Link to={`/product/${product.id}`}>
             <div>
                 <SaleBadge badgeContent="Sale">
-                <img src={product.image_url} alt={product.name}>
+                <img className="productCardImage" src={product.image_url} alt={product.name}>
                 </img>
                 </SaleBadge>
             </div>

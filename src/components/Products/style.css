@@ -29,3 +29,14 @@
 	-ms-transition: all 0.2s ease 0s;
 	-o-transition: all 0.2s ease 0s;
 }
+
+.productCardImage {
+	height: 100%;
+	width: 100%;
+	max-width: 250px;
+	border-radius: 1rem;
+	-webkit-border-radius: 1rem;
+	-moz-border-radius: 1rem;
+	-ms-border-radius: 1rem;
+	-o-border-radius: 1rem;
+}
