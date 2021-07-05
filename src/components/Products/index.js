@@ -1,22 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import PropTypes from 'prop-types';
+
 import ProductCard from './ProductCard';
 
 import './style.css';
 
 class Products extends React.Component {
 
-    state = { products: [] };
     constructor( props){
         super(props);
     }
 
     componentDidMount() {
+        /*
         const fetchproduct =   getProducts();
         const products =  fetchproduct().then(
             products =>  this.setState( { products:  products } )
         );
+        */
 
     }
 
@@ -24,14 +29,14 @@ class Products extends React.Component {
 
 
     render() {
-        console.log ( '----' + this.state.products );
+        console.log ( '----' + this.props.products );
 
-        if (this.state.products && this.state.products.length) {
+        if (this.props.products && this.props.products.length) {
             //your code here
             return (
                 <div className="page productPage">
                     <Row className="products">
-                        {   this.state.products.map ( ( product) => (
+                        {   this.props.products.map ( ( product) => (
                             <ProductCard key={product.id} product={product} ></ProductCard>
 
                         )
@@ -70,4 +75,20 @@ const getProducts = () => async () => {
         console.log( '[getProducts][error]', error);
     }
 }
-export default Products;
+
+
+const mapStateToProps = ( state) => {
+    return {
+        products: state.storeReducer.products,
+        fetchingProducts: state.storeReducer.fetchingProducts,
+    }
+}
+
+export default connect(mapStateToProps)(Products);
+
+
+Products.propTypes = {
+	fetchingProducts: PropTypes.bool.isRequired,
+    products: PropTypes.array,
+
+}

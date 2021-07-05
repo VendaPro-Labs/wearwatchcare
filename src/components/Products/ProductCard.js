@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import Col from 'react-bootstrap/Col';
 
 import { Link }from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
 
 import Badge from '@material-ui/core/Badge';
 import { withStyles } from '@material-ui/core/styles';
 
+import { addItemToCart } from '../../redux/actions/cartActions';
 
 const SaleBadge = withStyles( ()=> ({
     badge: {
@@ -19,7 +22,7 @@ const SaleBadge = withStyles( ()=> ({
 
 })) (Badge);
 
-const ProductCard = ( {product} ) => {
+const ProductCard = ( {product, addItemToCart} ) => {
     console.log( product.name);
 
     return (
@@ -33,13 +36,15 @@ const ProductCard = ( {product} ) => {
                 </img>
                 </SaleBadge>
             </div>
-
-            <div>
-                <div>
-
+            </Link>
+            <div className="productCardContent">
+                <div className="productCardDetails">
+                    <Button onClick={addItemToCart}>
+                        ${(product.price/100).toFixed(2)} - Add to Cart
+                    </Button>
                 </div>
             </div>
-            </Link>
+
         </div>
         </Col>
     )
@@ -47,7 +52,18 @@ const ProductCard = ( {product} ) => {
 }
 
 ProductCard.prototypes = {
-    product: PropTypes.object.isRequired
+    product: PropTypes.object.isRequired,
+    addItemToCart: PropTypes.func.isRequired,
 }
 
-export default ProductCard;
+const mapDispatchToProps = ( dispatch, ownProps) => {
+    const {product} = ownProps;
+
+    return {
+        addItemToCart: () =>
+            dispatch( addItemToCart(product.id, 1, 'increment_count') ),
+    }
+
+}
+
+export default connect(  null, mapDispatchToProps)(ProductCard);
