@@ -10,6 +10,7 @@ import _isEmpty from 'lodash.isempty';
 import {getProducts} from './redux/actions/storeActions'
 import { getTotals } from './redux/actions/cartActions';
 
+import { getSquareEnvrionment }  from './redux/actions/squareActions';
 
 import { loadState } from './redux/localStorage';
 
@@ -26,9 +27,13 @@ const App = ({dispatch, enableSideBar, cartItems }) => {
 		if (_isEmpty(localState) || _isEmpty(localState.storeReducer.products)) {
 			const fetchProducts = async () => {
 				await dispatch(getProducts());
-			};
 
+			};
+      const fetchSquareEnv = async () => {
+        await dispatch( getSquareEnvrionment() );
+      }
 			fetchProducts();
+      fetchSquareEnv();
 		}
 	}, [dispatch, localState]);
 

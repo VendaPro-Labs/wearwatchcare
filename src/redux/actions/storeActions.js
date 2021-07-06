@@ -14,7 +14,7 @@ import {
         try{
             const res = await fetch ( productUrl);
             const products = await res.json();
-            console.log(products);
+            ///console.log(products);
             dispatch ( getProductsSuccess(products));
 
         }catch(error) {

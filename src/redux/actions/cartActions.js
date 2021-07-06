@@ -13,10 +13,15 @@ import {
 	GET_TOTALS,
 	SET_PAYMENT_METHOD,
 	REMOVE_DISCOUNT,
+   SET_CARD_PRE_REQUEST,
 } from '../constants';
 
 export const setCart = (product, qt,type)  => {
    return {type: SET_CART, payload: {product, qt, type}};
+}
+
+export const setCardPreRequest= () => {
+    return {type: SET_CARD_PRE_REQUEST, payload: { cardToken: '' }};
 }
 
 export const addItemToCart = (id, qt, type='change_count') =>
@@ -38,3 +43,10 @@ export const getTotals= ()=> {
       return { type: GET_TOTALS };
 
 }
+
+
+export const cartCardPreRequest = () =>
+      ( dispatch, getState ) => {
+         console.log(" Now in cartCardPreRequest ");
+         dispatch( setCardPreRequest() );
+      }
