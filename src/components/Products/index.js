@@ -80,7 +80,7 @@ const getProducts = () => async () => {
 const mapStateToProps = ( state) => {
     return {
         products: state.storeReducer.products,
-        fetchingProducts: state.storeReducer.fetchingProducts,
+        //fetchingProducts: state.storeReducer.fetchingProducts,
     }
 }
 
@@ -88,7 +88,7 @@ export default connect(mapStateToProps)(Products);
 
 
 Products.propTypes = {
-	fetchingProducts: PropTypes.bool.isRequired,
+	//fetchingProducts: PropTypes.bool.isRequired,
     products: PropTypes.array,
 
 }

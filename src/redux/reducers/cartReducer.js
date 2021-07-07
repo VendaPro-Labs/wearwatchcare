@@ -11,9 +11,12 @@ import {
 	SET_PAYMENT_METHOD,
 	REMOVE_DISCOUNT,
 	SET_CARD_PRE_REQUEST,
+	STE_CARD_TOKEN_CREATED,
 	CARD_TOKEN_STATUS_UNKNOWN,
 	CARD_TOKEN_STATUS_REQUESTING,
-	CARD_TOKEN_STATUS_GENERATED,
+	CARD_TOKEN_STATUS_CREATED,
+	SET_CARD_PAYMENT_REPLIED,
+
 } from '../constants';
 
 import _cloneDeep from 'lodash.clonedeep';
@@ -31,6 +34,7 @@ const initialState = {
 	paymentMethod: 'Other',
 	cardToken:'',
 	cardTokenState:CARD_TOKEN_STATUS_UNKNOWN,
+	paymentResult:{code:''},
 };
 
 
@@ -88,12 +92,32 @@ export const cartReducer = (state = initialState, action) => {
 		}
 		case SET_CARD_PRE_REQUEST: {
 			console.log("Reduce SET_CARD_PRE_REQUEST ");
+			// Payment url
+
+
 			return {
 				...state,
 				cardToken: action.payload.cardToken,
 				cardTokenState:CARD_TOKEN_STATUS_REQUESTING,
 			}
 		}
+		case STE_CARD_TOKEN_CREATED:{
+			console.log("Reduce STE_CARD_TOKEN_CREATED");
+			return {
+				...state,
+				cardToken: action.payload.cardToken,
+				cardTokenState: CARD_TOKEN_STATUS_CREATED,
+			}
+		}
+		case SET_CARD_PAYMENT_REPLIED:{
+			console.log("Reducer SET_CARD_PAYMENT_REPLIED");
+			console.log(action.payload);
+			return {
+				...state,
+				paymentResult: action.payload,
+			}
+		}
+
         default: {
             return {
                 ...state,

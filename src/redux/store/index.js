@@ -6,7 +6,7 @@ import rootReducer from '../reducers';
 
 export const store = createStore(
 	rootReducer,
-	{products: []},
+	{ storeReducer: {products: []}},
 	compose(applyMiddleware(thunkMiddleware))
 );
 

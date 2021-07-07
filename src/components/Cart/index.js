@@ -6,10 +6,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import CartList from './CartList';
+import _isEmpty from 'lodash.isempty';
+
 
 import './style.css';
+import  PagePaymentSubmitted from '../Pages/PagePaymentSubmited';
 
-const Cart = ( { itemsTotalCount }) => {
+const Cart = ( { itemsTotalCount, cardTokenState, paymentCode }) => {
 
     return (
 
@@ -17,6 +20,8 @@ const Cart = ( { itemsTotalCount }) => {
             { itemsTotalCount > 0 ? (
                     <Row className="pageHeader checkoutHeader">
                         <CartList />
+                        { cardTokenState === 'CREATED'?
+                            (<PagePaymentSubmitted></PagePaymentSubmitted> ):(<div></div>) }
                     </Row>
                 ) : (
                     <Row className="pageHeader">
@@ -27,7 +32,6 @@ const Cart = ( { itemsTotalCount }) => {
                 )
 
             }
-
         </div>
 
     );
@@ -37,11 +41,16 @@ const Cart = ( { itemsTotalCount }) => {
 const mapStateToProps = ( state ) => {
     return {
 		itemsTotalCount: state.cartReducer.itemsTotalCount,
+        paymentCode: state.cartReducer.paymentResult.code,
+        cardTokenState: state.cartReducer.cardTokenState,
+
     }
 }
 
 Cart.prototype = {
     itemsTotalCount: PropTypes.number.isRequired,
+    paymentCode: PropTypes.string,
+    cardTokenState: PropTypes.string,
 }
 
 export default connect(mapStateToProps)(Cart);

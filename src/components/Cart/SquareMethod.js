@@ -3,14 +3,20 @@
 import React, { Component, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom';
 
 import { CARD_TOKEN_STATUS_REQUESTING } from '../../redux/constants';
 
+import { setCardTokenGenerated,setCardPaymentRequest }  from '../../redux/actions/cartActions';
+
+
+
 class SquareMethod extends Component {
+
 
     constructor( props) {
 
-        super(props);
+        super(props)
         this.cardRef = React.createRef();
 
 
@@ -22,20 +28,33 @@ class SquareMethod extends Component {
 
     }
 
-
+    // Hook function to call state function ( where to get card token ) upon CARD_TOKEN_STATUS_REQUESTING
     requestCardToken =  () => {
+
+        //For test purpose, a Call back is the poing where token created
         let token ;
         const callBack = ( newToken) => {
             console.log( "Set token", newToken);
             token = newToken;
+            this.props.dispatch( setCardTokenGenerated(token) );
+            this.props.dispatch( setCardPaymentRequest(token) );
+
+            this.goPaymentSubmittedPage();
         }
 
+        //async/wait
         const fetchToken = async() => {
             const tokeResult = await this.state.squareCardTokenFunc( callBack);
             console.log("toekn generated", tokeResult);
 
         }
         fetchToken();
+
+    }
+
+    goPaymentSubmittedPage = ()=> {
+
+        //this.props.history.push('/payment_submitted');
 
 
     }
@@ -146,6 +165,7 @@ class SquareMethod extends Component {
         return true;
     }
 
+    // Triggred by Store state->CARD_TOKEN_STATUS_REQUESTING communicated from component CarTotals Pay Now
     componentWillUpdate(nextProps, nextState) {
         console.log("componentWillUpdate", nextProps.cardTokenState);
         if (nextProps.cardTokenState === CARD_TOKEN_STATUS_REQUESTING ) {
@@ -194,7 +214,8 @@ SquareMethod.propTypes = {
     squareEnv: PropTypes.object.isRequired,
     squarePayment: PropTypes.object,
     squareCard: PropTypes.object,
+    cardTokenState: PropTypes.string,
 
 }
 
- export default connect(mapStateToProps)(SquareMethod);
+ export default connect(mapStateToProps)(withRouter(SquareMethod));
