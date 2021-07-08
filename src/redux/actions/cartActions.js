@@ -50,7 +50,7 @@ export const setCardPaymentRequest = ( token ) => async (dispatch, getState) => 
       //Sleep ....
       delay ( 3000);
 
-      const PAY_URL= 'http://localhost:8080'
+      const PAY_URL= 'https://api-payment-wearwatchcare.wn.r.appspot.com'
       fetch (PAY_URL+'/process-payment',
         { method: 'POSt',
          headers: {

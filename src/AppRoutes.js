@@ -9,7 +9,7 @@ const AppRoutes = () => {
         <Switch>
             <Route exact path="/" component={Products} />
             <Route exact path="/cart" component={Cart} />
-            <Route exact path="/payment_submitted" compoent={PagePaymentSubmited} />
+            <Route exact path="/paymentsubmitted" component={PagePaymentSubmited} />
         </Switch>
         </div>
     )

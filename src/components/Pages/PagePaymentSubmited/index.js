@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col'
 import Spinner from 'react-bootstrap/Spinner';
 import _isEmpty from 'lodash.isempty';
 
+import './style.css';
 
 class PagePaymentSubmited extends Component {
 
@@ -24,6 +25,7 @@ class PagePaymentSubmited extends Component {
     }
 
     componentDidMount() {
+        console.log( "PagePaymentSubmited componentDidMount" );
 
     }
 
@@ -53,9 +55,9 @@ class PagePaymentSubmited extends Component {
 
     render() {
         return (
-            <div className="page">
-                <Row>
-                    <Col>
+            <div className="page submittedPage">
+                <Row >
+                   <Col>
                         <h6>Payment:{this.props.paymentCode}-</h6>
                     </Col>
                 </Row>
@@ -73,7 +75,7 @@ class PagePaymentSubmited extends Component {
                 ) : (
 
                     <Row>
-                        <Col>
+                         <Col lg={4} md={6} sm={6} xs={12}>
                             <h1 className="pageTitle">Completed</h1>
                             <h6>Payment Code: { this.props.paymentCode}</h6>
                             <h6>{ this.props.paymentMessage}</h6>

@@ -29,7 +29,6 @@ class Products extends React.Component {
 
 
     render() {
-        console.log ( '----' + this.props.products );
 
         if (this.props.products && this.props.products.length) {
             //your code here

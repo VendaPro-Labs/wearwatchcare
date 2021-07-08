@@ -54,7 +54,7 @@ class SquareMethod extends Component {
 
     goPaymentSubmittedPage = ()=> {
 
-        //this.props.history.push('/payment_submitted');
+        this.props.history.push('/paymentsubmitted');
 
 
     }

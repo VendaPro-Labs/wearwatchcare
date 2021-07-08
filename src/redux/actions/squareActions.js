@@ -6,7 +6,7 @@ export const getSquareEnvrionmentSuccess= ( squareEnv ) =>{
 
 export const getSquareEnvrionment = () => async(dispatch) => {
     //const backUrl =  `${process.env.REACT_APP_MY_PAYMENT_BACK_URL}/square`;
-    const backUrl =  `http://localhost:8080/square`;
+    const backUrl =  `https://api-payment-wearwatchcare.wn.r.appspot.com/square`;
 
     try{
         const res = await fetch ( backUrl);
