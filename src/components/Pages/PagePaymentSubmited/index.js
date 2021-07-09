@@ -77,7 +77,7 @@ class PagePaymentSubmited extends Component {
                     <Row>
                          <Col lg={4} md={6} sm={6} xs={12}>
                             <h1 className="pageTitle">Completed</h1>
-                            <h6>Payment Code: { this.props.paymentCode}</h6>
+                            <h6>Payment Ref: { this.props.paymentRefId}</h6>
                             <h6>{ this.props.paymentMessage}</h6>
                         </Col>
                     </Row>

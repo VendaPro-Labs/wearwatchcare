@@ -1,3 +1,13 @@
+
+#
+
+https://developer.squareup.com/reference/sdks/web/payments
+
+https://developer.squareup.com/docs/testing/test-values
+
+https://developer.squareup.com/docs/sample-apps
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

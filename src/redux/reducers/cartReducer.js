@@ -117,6 +117,13 @@ export const cartReducer = (state = initialState, action) => {
 				paymentResult: action.payload,
 			}
 		}
+		case CLEAR_CART :{
+			return {
+				...state,
+				// paymentResult: state.paymentResult, // Kept
+				itemsTotalCount: 0,
+			}
+		}
 
         default: {
             return {

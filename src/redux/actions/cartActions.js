@@ -33,6 +33,15 @@ export const setCardTokenGenerated= (token) => {
    return {type: STE_CARD_TOKEN_CREATED, payload: { cardToken: token }};
 }
 
+export const setCardPaymentReplied = ( reply ) => {
+   return { type: SET_CARD_PAYMENT_REPLIED, payload: reply };
+
+}
+
+export const clearCart= () => {
+    return { type: CLEAR_CART };
+}
+
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 // Step 3
@@ -48,7 +57,7 @@ export const setCardPaymentRequest = ( token ) => async (dispatch, getState) => 
    const jsonBody = JSON.stringify( paymentRequest);
 
       //Sleep ....
-      delay ( 3000);
+      delay ( 5000);
 
       const PAY_URL= 'https://api-payment-wearwatchcare.wn.r.appspot.com'
       fetch (PAY_URL+'/process-payment',
@@ -63,11 +72,12 @@ export const setCardPaymentRequest = ( token ) => async (dispatch, getState) => 
       .then ( data => {
             console.log( data);
             const {code, message, refId, status} = data;
-            dispatch ( {type: SET_CARD_PAYMENT_REPLIED, payload: data} );
+            dispatch ( setCardPaymentReplied(data) );
+            dispatch( clearCart());
       } )
       .catch( error => {
           console.log( error);
-         dispatch ( {type: SET_CARD_PAYMENT_REPLIED, payload: {code: 'FAILURE', message: error}} );
+         dispatch (setCardPaymentReplied( {code: 'FAILURE', message: error} ) );
       });
 
 
