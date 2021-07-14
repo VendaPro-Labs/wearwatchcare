@@ -4,6 +4,8 @@ import React, { Component, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+
 
 import { CARD_TOKEN_STATUS_REQUESTING } from '../../redux/constants';
 
@@ -191,7 +193,13 @@ class SquareMethod extends Component {
         return (
             <div> {this.props.cardTokenState}
             <div id="payCard" ref={this.cardRef}>
+                   { this.state.squareCard == null ?
+                            (<Spinner animation="border" rolw="status">
+                                <span className="sr-only">...</span>
 
+                            </Spinner> )
+                      : ( <div/>)
+                   }
             </div>
         </div>
         )
